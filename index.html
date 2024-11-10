@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The official Lunar Developments website!">
+    <meta name="keywords" content="Official, Lunar, Developments, Website, Site, Free, Premium, Simple, Advanced, Advertise, Local, Internal, External, Word, Words, Keyword, Keywords, Tag, Hashtag, Social, Media, SocialMedia, Meta, Data, Binary, Code, Coding, program, Programming, Tech, Technology, Browser, Search, Engine, SearchEngine, AI, Artificial, Intelligence, ArtificialIntelligence, Google, Microsoft, Open, OpenAI">
+    <meta name="author" content="Lunar Developments™">
+    <meta name="theme-color" content="#1c2a3b">
+    <meta property="og:title" content="LunarDev">
+    <meta property="og:description" content="The official Lunar Developments website!">
+    <meta property="og:image" content="assets/branding/image.png">
+    <meta property="og:url" content="https://lunarorg.github.io/LunarDev">
+
+    <link rel="icon" href="assets/branding/logo.ico" type="image/x-icon">
+    <link rel="manifest" href="assets/manifest.json">
+
+    <title>LunarDev</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1c2a3b;
+            color: #fff;
+            text-align: center;
+        }
+
+        .preloader-container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .preloader-icon img {
+            width: 75px !important;
+            height: auto !important;
+        }
+
+        .bubble {
+            width: 25px;
+            height: 25px;
+            margin: 0;
+            background-color: rgba(255, 255, 255, 0.6);
+            border-radius: 50%;
+            animation: bubble-morph 2s infinite ease-in-out;
+        }
+
+        @keyframes bubble-morph {
+            0% {
+                transform: scale(1);
+                border-radius: 50%;
+            }
+            25% {
+                transform: scale(1.3) rotate(15deg);
+                border-radius: 70% 70% 40% 40%;
+            }
+            50% {
+                transform: scale(1.5) rotate(-15deg);
+                border-radius: 80% 60% 60% 80%;
+            }
+            75% {
+                transform: scale(1.7) rotate(10deg);
+                border-radius: 90% 50% 90% 50%;
+            }
+            100% {
+                transform: scale(1) rotate(0deg);
+                border-radius: 50%;
+            }
+        }
+
+        .loading-text {
+            margin-top: 15px;
+            font-size: 18px;
+        }
+
+        .copyright {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 14px;
+            color: #fff;
+        }
+
+        @media (max-width: 767px) {
+            .preloader-icon img {
+                width: 80px;
+            }
+
+            .loading-text {
+                font-size: 16px;
+            }
+
+            .copyright {
+                font-size: 12px;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .preloader-icon img {
+                width: 90px;
+            }
+
+            .loading-text {
+                font-size: 17px;
+            }
+        }
+
+        @media (min-width: 1025px) {
+            .preloader-icon img {
+                width: 100px;
+            }
+
+            .loading-text {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="preloader-container">
+
+        <div class="preloader-icon">
+            <img src="assets/branding/logo.png" alt="Logo">
+        </div>
+        
+        <br>
+         <br>
+
+        <div class="bubble"></div>
+
+        <div class="loading-text">
+            Checking browser, please wait...
+        </div>
+    </div>
+
+    <div class="copyright">
+        &copy; LunarDev 2024, by Lunar Developments™. All rights reserved
+    </div>
+
+    <script>
+        const redirectTime = 3000;
+        const redirectUrl = 'index.html';
+
+        setTimeout(() => {
+            window.location.href = redirectUrl;
+        }, redirectTime);
+
+        function detectDevice() {
+            const userAgent = navigator.userAgent;
+            if (/Mobi|Android/i.test(userAgent)) {
+                document.body.classList.add('mobile');
+            } else {
+                document.body.classList.add('desktop');
+            }
+        }
+        detectDevice();
+    </script>
+
+</body>
+</html>
