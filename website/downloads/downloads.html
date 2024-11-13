@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LunarDev</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-color: #1a1f2b;
+            color: #fff;
+            text-align: center;
+        }
+
+        .download-container {
+            width: 90%;
+            max-width: 400px;
+            background-color: #141414;
+            border-radius: 12px;
+            border: 2px solid #fff;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .app-icon img {
+            width: 58px;
+            height: auto;
+        }
+
+        .header-text h3 {
+            margin-top: 20px;
+            font-size: 1.6em;
+            color: #ffffff;
+        }
+
+        .header-text p {
+            margin-top: 8px;
+            font-size: 1em;
+            color: #c0c0c0;
+        }
+
+        .download-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            margin-top: 20px;
+            padding: 12px 16px;
+            background-color: #1e1e1e;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1em;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .download-button:hover {
+            background-color: #5a3575;
+        }
+
+        .download-button img {
+            width: 25px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .copyright {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.8em;
+            color: #c0c0c0;
+        }
+
+        @media (max-width: 767px) {
+            .download-container {
+                max-width: 320px;
+                padding: 20px;
+            }
+            
+            .app-icon img {
+                width: 25px;
+            }
+            
+            .header-text h3 {
+                font-size: 1.4em;
+            }
+            
+            .header-text p {
+                font-size: 0.9em;
+            }
+            
+            .download-button {
+                font-size: 0.9em;
+                padding: 10px 14px;
+            }
+        }
+    </style>
+    <script>
+
+        function detectDevice() {
+            const userAgent = navigator.userAgent;
+            if (/Mobi|Android/i.test(userAgent)) {
+                document.body.classList.add('mobile');
+            } else {
+                document.body.classList.add('desktop');
+            }
+        }
+        window.onload = detectDevice;
+    </script>
+</head>
+<body>
+
+    <div class="download-container">
+
+        <div class="app-icon">
+            <img src="https://lunarorg.github.io/LunarDev/assets/icons/downloaders.png" alt="Downloads">
+        </div>
+
+        <div class="header-text">
+            <h3>Downloads</h3>
+            <p>Choose which platform You'd like to download content for!</p>
+        </div>
+        
+        <br>
+
+        <a href="windows/windows.html" class="download-button" target="_blank">
+            <img src="https://lunarorg.github.io/LunarDev/assets/icons/windows.png" alt="Windows"> Windows
+        </a>
+        <a href="android/android.html" class="download-button" target="_blank">
+            <img src="https://lunarorg.github.io/LunarDev/assets/icons/android.png" alt="Android"> Android
+        </a>
+    </div>
+
+    <div class="copyright">
+        &copy; LunarDev 2024, by Lunar Developments™. All rights reserved
+    </div>
+
+</body>
+</html>
