@@ -1,0 +1,84 @@
+@font-face {
+    font-family: Product-Sans-Regular;
+    src: url(assets/fonts/Product-Sans-Regular.ttf);
+}
+
+@keyframes l4 {
+    to{width:25px;aspect-ratio: 1}
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Product-Sans-Regular;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+}
+
+.preloader-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.preloader-icon img {
+    width: 200px !important;
+    height: auto !important;
+}
+
+.loader {
+    width: 60px;
+    aspect-ratio: 4;
+    --c:#ffffff 90%,#ffffff00;
+    background: radial-gradient(circle closest-side at left  6px top 50%,var(--c)), radial-gradient(circle closest-side, var(--c)), radial-gradient(circle closest-side at right 6px top 50%,var(--c));
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    animation: l4 1s infinite alternate;
+}
+
+.loading-text {
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+@media (min-width: 1025px) {
+    .preloader-icon img {
+        width: 100px;
+    }
+
+    .loading-text {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .preloader-icon img {
+        width: 90px;
+    }
+
+    .loading-text {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 767px) {
+    .preloader-icon img {
+        width: 80px;
+    }
+
+    .loading-text {
+        font-size: 16px;
+    }
+
+}
