@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/bocajthomas/LD-Web-App/main/assets/branding/Brand-icon.png" height="140"/>
+  <img src="https://raw.githubusercontent.com/bocajthomas/LD-Web-App/refs/heads/main/assets/branding/Brand-Icon.png" height="200"/>
 
 This Web Aplication Contains code from [lunarorg/LunarDev](https://github.com/lunarorg/LunarDev)
 
